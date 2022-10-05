@@ -12,7 +12,7 @@ $(".saveBtn").on("click",function(){
 })
 
 //Target places we want to put text value and make it persist & get from local storage
-$(`#9 .description`).val(localStorage.getItem("9"))
+$(`#0900 .description`).val(localStorage.getItem("9"))
 
 
 //Time of day 
@@ -21,6 +21,16 @@ $("#currentDay").text(currentTime);
 
 var currentHour = moment().hours()
 //past present future
-$(".time-block").each(function(){
-
+$(".time-block").each(function() {
+    var divNumber = $(this).attr("id")
+    if (divNumber < currentHour) {
+        $(this).addClass("past")
+    }
+    if (divNumber === currentHour) {
+        $(this).addClass("present")
+    }
+    if (divNumber > currentHour) {
+        $(this).addClass("future")
+    }
 }) 
+

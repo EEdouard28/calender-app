@@ -18,6 +18,7 @@ Input fields and save button are provided to users in order to store their sched
 This calendar is desktop and mobile compatible.
 
 ## Screenshot
+![Screenshot Capture - 2022-10-06 - 19-41-47](https://user-images.githubusercontent.com/111817163/194437573-3d9bb634-054b-4740-af29-dc9809ebb4e8.png)
 
 ## Test
 

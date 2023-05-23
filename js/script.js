@@ -24,21 +24,19 @@ var currentTime = moment().format('MMMM Do YYYY');
 $("#currentDay").text(currentTime);
 
 var currentHour = moment().hours()
+
+
 //past present future
 $(".time-block").each(function() {
-    var divNumber = $(this).attr("id");
+    var divNumber = parseInt($(this).attr("id")); // Convert to number using parseInt()
 
     if (divNumber < currentHour) {
         $(this).addClass("past");
-    }
-
-    if (divNumber === currentHour) {
+    } else if (divNumber === currentHour) {
         $(this).addClass("present");
-    }
-    if (divNumber > currentHour) {
+    } else {
         $(this).addClass("future");
     }
-
 })
 
 
